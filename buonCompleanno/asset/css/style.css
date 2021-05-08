@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800;900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+    
+body
+{
+    background: rgb(197, 64, 64) url('/buonCompleanno/asset/img/sfondo.jpeg');
+    background-attachment: fixed;
+    background-blend-mode: hard-light
+
+}
+.container
+{
+    position: absolute;
+    top: 100px;
+    bottom: 100px;
+    right: 180px;
+    left: 180px;
+    background: url('/buonCompleanno/asset/img/sfondo.jpeg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.7);
+
+}
+.container h2
+{
+    text-align: center;
+    font-style: oblique;
+    color: #333;
+    font-size: 4rem;
+    margin-top: -80px;
+}
+.container h2 span
+{
+    display: block;
+    font-weight: 400;
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+}
+.countdown
+{
+    display: flex;
+    margin-top: 50px;
+}
+.countdown div
+{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    margin: 0 15px;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.countdown div::before
+{
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: rgb(226, 226, 15);
+    font-style: 0.5rem;
+    line-height: 30px;
+    font-weight: 400;
+}
+.countdown #day::before
+{
+    content: 'Days';
+    font-size: 1.5rem;
+}
+.countdown #hour::before
+{
+    content: 'Hour';
+    font-size: 1.5rem;
+}
+.countdown #minute::before
+{
+    content: 'Minute';
+    font-size: 1.5rem;
+}
+.countdown #second::before
+{
+    content: 'Seconds';
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 992px) {
+
+    .container
+    {
+        position: absolute;
+        top: 100px;
+        bottom: 100px;
+        right: 100px;
+        left: 100px;
+    }
+}
+@media screen and (max-width: 768px) {
+
+    .container
+    {
+        position: absolute;
+        top: 100px;
+        bottom: 100px;
+        right: 50px;
+        left: 50px;
+    }
+}
+@media screen and (max-width: 576px) {
+
+    .container
+    {
+        position: absolute;
+        top: 100px;
+        bottom: 100px;
+        right: 25px;
+        left: 25px;
+    }
+    .countdown div
+    {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        margin: 0 5px;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    .countdown #day::before
+    {
+    content: 'Days';
+    font-size: 1rem;
+    }
+.countdown #hour::before
+    {
+    content: 'Hour';
+    font-size: 1rrem;
+    }
+    .countdown #minute::before
+    {
+    content: 'Min.';
+    font-size: 1rem;
+    }
+    .countdown #second::before
+    {
+    content: 'Sec.';
+    font-size: 1rem;
+    }
+}
