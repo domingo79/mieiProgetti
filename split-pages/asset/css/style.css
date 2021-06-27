@@ -13,6 +13,7 @@
     --right-btn-hover-color: rgba(28,128,28, 1);
     --hover-width: 70%;
     --other-width: 30%;
+    --speed: 1000ms;
 }
 body
 {
@@ -105,24 +106,26 @@ body
 .hover_left .left
 {
     width: var(--hover-width);
-    transition: width 0.7s ease;
 }
 .hover_left .right
 {
     width: var(--other-width);
-    transition: width 0.7s ease;
-
 }
 
 .hover_right .right
 {
     width: var(--hover-width);
-    transition: width 0.7s ease;
-
 }
 .hover_right .left
 {
     width: var(--other-width);
-    transition: width 0.7s ease;
+}
 
+/* per la transizione width  */
+.split.left,
+.split.right,
+.split.left::before, 
+.split.right::before
+{
+    transition: all var(--speed) ease-in-out;
 }
